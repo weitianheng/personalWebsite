@@ -298,6 +298,7 @@ function openWork(hh, ani) {
           "</p>" +
           "</div>";
         var color = data["color"];
+        console.log(color);
         $("#logo").attr("fill", color);
         var h_dif = getHfromHex(color).h - 217;
         var gg = (getHfromHex(color).s * 100) / 89;
