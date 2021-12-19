@@ -1,4 +1,7 @@
 window.onload = function () {
+  var dialog = [];
+  var dialogColor = [];
+
   const workPicSize = 200;
 
   // draw the logo
@@ -129,6 +132,10 @@ window.onload = function () {
       "</svg>";
 
     gallery.innerHTML = gallery.innerHTML + innerHTML;
+
+    //set value for dialog and dialogcolor
+    dialog.push("<span>" + d["name"] + "</span> - " + d["beschreiben"]);
+    dialogColor.push(d["color"]);
   }
 
   fetch("./listOfWorks.json")
