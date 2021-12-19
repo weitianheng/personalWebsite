@@ -195,7 +195,7 @@ function openWork(hh, ani) {
         var innerHTML =
           '<div style="width:100%; height:100px; background-color:#fff; top:0px;" ></div>' +
           "<div >" +
-          (data["media"] == "video")
+          (data["media"] == "video"
             ? '<video id="video" width="100%" controls controlsList="nodownload" onloadstart="videoLoad()" >' +
               '<source src="video/' +
               data["name"] +
@@ -213,7 +213,7 @@ function openWork(hh, ani) {
               "</div>" +
               '<div id="shuming">' +
               "</div>" +
-              '<div class="container_d" >';
+              '<div class="container_d" >');
         var n = 1;
         while (data["titel" + n]) {
           innerHTML =
