@@ -91,7 +91,7 @@ window.onload = function () {
       (i + 1) +
       '" xlink:href="img/' +
       d["name"] +
-      '+png" width="' +
+      '.png" width="' +
       workPicSize * 2 +
       '" height="' +
       (workPicSize * 4) / Math.sqrt(3) +
