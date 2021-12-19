@@ -1,7 +1,4 @@
 window.onload = function () {
-  var dialog = [];
-  var dialogColor = [];
-
   const workPicSize = 200;
 
   // draw the logo
