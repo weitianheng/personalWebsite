@@ -194,9 +194,8 @@ function openWork(hh, ani) {
         //space
         var innerHTML =
           '<div style="width:100%; height:100px; background-color:#fff; top:0px;" ></div>' +
-            "<div >" +
-            data["media"] ==
-          "video"
+          "<div >" +
+          (data["media"] == "video")
             ? '<video id="video" width="100%" controls controlsList="nodownload" onloadstart="videoLoad()" >' +
               '<source src="video/' +
               data["name"] +
