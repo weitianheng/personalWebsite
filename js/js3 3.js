@@ -195,15 +195,15 @@ function openWork(hh, ani) {
         var innerHTML =
           '<div style="width:100%; height:100px; background-color:#fff; top:0px;" ></div>' +
             "<div >" +
-            data["media"] ===
+            data["media"] ==
           "video"
             ? '<video id="video" width="100%" controls controlsList="nodownload" onloadstart="videoLoad()" >' +
               '<source src="video/' +
               data["name"] +
-              '+mp4" type="video/mp4">' +
+              '.mp4" type="video/mp4">' +
               '<source src="video/' +
               data["name"] +
-              '+ogg" type="video/ogg">' +
+              '.ogg" type="video/ogg">' +
               "Your browser does not support the video tag+" +
               "</video>"
             : '<iframe width="100%" id="iframe_work" data="' +
