@@ -87,7 +87,7 @@ window.onload = function () {
       '<image id="img' +
       (i + 1) +
       '" xlink:href="img/' +
-      d["name"] +
+      d["name"].replaceAll("ä", "ae") +
       '.png" width="' +
       workPicSize * 2 +
       '" height="' +

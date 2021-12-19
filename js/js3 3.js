@@ -187,10 +187,57 @@ function openWork(hh, ani) {
   }
 
   if (hh !== pwn) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("space3").innerHTML = this.responseText;
+    fetch("./listOfWorks.json")
+      .then((response) => response.json())
+      .then((data) => {
+        //space
+        var innerHTML =
+          '<div style="width:100%; height:100px; background-color:#fff; top:0px;" ></div>' +
+            "<div >" +
+            data["media"] ===
+          "video"
+            ? '<video id="video" width="100%" controls controlsList="nodownload" onloadstart="videoLoad()" >' +
+              '<source src="video/' +
+              data["name"] +
+              '+mp4" type="video/mp4">' +
+              '<source src="video/' +
+              data["name"] +
+              '+ogg" type="video/ogg">' +
+              "Your browser does not support the video tag+" +
+              "</video>"
+            : '<iframe width="100%" id="iframe_work" data="' +
+              data["H_min"] +
+              '" src="' +
+              data["url"] +
+              '" frameborder="0" onload="load()" ></iframe>' +
+              "</div>" +
+              '<div id="shuming">' +
+              "</div>" +
+              '<div class="container_d" >';
+        var n = 1;
+        while (data["titel" + n]) {
+          innerHTML =
+            innerHTML +
+            '<div class="detail">' +
+            '<img class="detailimage" src="' +
+            data["img" + n] +
+            '">' +
+            '<div class="detailtitle" style="color:' +
+            data["color"] +
+            '">' +
+            data["titel" + n] +
+            "</div>" +
+            '<div class="detailtext" style="color:' +
+            data["color"] +
+            '">' +
+            data["inhalt" + n] +
+            "</div>" +
+            "</div>";
+          n++;
+        }
+        innerHTML = innerHTML + "</div>";
+
+        document.getElementById("space3").innerHTML = innerHTML;
 
         var c = 0;
         var l = $(".detailimage>img").length + $(".detail>img").length;
@@ -235,14 +282,21 @@ function openWork(hh, ani) {
             zouni();
           }
         });
-      }
-    };
-    xmlhttp.open("GET", "WorkContent.php?n=" + (Number(hh) + 1), true);
-    xmlhttp.send();
-    var xmlhttp2 = new XMLHttpRequest();
-    xmlhttp2.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("titel3").innerHTML = this.responseText;
+
+        //title
+        document.getElementById("titel3").innerHTML =
+          '<div  style="position:absolute; top: 50%; padding: 0px 50px 0px 50px; margin-top: -14px; font-style: italic; color:' +
+          data["color"] +
+          '">' +
+          '<h2 style="display: inline;">' +
+          data["name"] +
+          " </h2>" +
+          '<p  id="workUnderTitle" data-color="' +
+          data["color"] +
+          '" style="display: inline;">' +
+          data["worktype"] +
+          "</p>" +
+          "</div>";
         var color = $("#workUnderTitle").attr("data-color");
         $("#logo").attr("fill", color);
         var h_dif = getHfromHex(color).h - 217;
@@ -257,10 +311,7 @@ function openWork(hh, ani) {
           "deg) saturate(" +
           gg +
           ");}";
-      }
-    };
-    xmlhttp2.open("GET", "WorkTitle.php?n=" + (Number(hh) + 1), true);
-    xmlhttp2.send();
+      });
   }
   var name = $("#pic" + hh)
     .attr("data_name")
