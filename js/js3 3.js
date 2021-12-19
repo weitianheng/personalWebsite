@@ -297,7 +297,7 @@ function openWork(hh, ani) {
           data["worktype"] +
           "</p>" +
           "</div>";
-        var color = $("#workUnderTitle").attr("data-color");
+        var color = data["color"];
         $("#logo").attr("fill", color);
         var h_dif = getHfromHex(color).h - 217;
         var gg = (getHfromHex(color).s * 100) / 89;
