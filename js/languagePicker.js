@@ -4,9 +4,9 @@ $(`#lang_pcker > .${language_g}`).addClass("active");
 
 $("#lang_picker").click(() => {
   $("#lang_pcker > span").toggleClass("active");
-  let paramsStr = new URLSearchParams(searchParams)
-    .set("language", language_g === "en" ? "de" : "en")
-    .toString();
+  let params = new URLSearchParams(searchParams);
+  params.set("language", language_g === "en" ? "de" : "en");
+  let paramsStr = params.toString();
   let newURL = document.location.href.split["?"][0] + paramsStr;
   window.open(newURL);
 });
