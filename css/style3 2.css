@@ -286,7 +286,7 @@ div > span {
 }
 #lang_picker > .active {
   font-weight: 700;
-  color: rgb(172, 178, 179);
+  color: #4a4444;
 }
 
 @media screen and (max-width: 810px) {
