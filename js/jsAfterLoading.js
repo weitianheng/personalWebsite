@@ -86,7 +86,7 @@ window.onload = function () {
       '" width="1" height="1" patternUnits="objectBoundingBox">' +
       '<image id="img' +
       (i + 1) +
-      '" xlink:href="img/' +
+      '" xlink:href="assets/img/' +
       d["name"].replaceAll("ä", "ae") +
       '.png" width="' +
       workPicSize * 2 +
@@ -135,7 +135,7 @@ window.onload = function () {
     dialogColor.push(d["color"]);
   }
 
-  fetch("./listOfWorks.json")
+  fetch(`./content/listOfWorks_${language_g}.json`)
     .then((response) => response.json())
     .then((data) => {
       Promise.all(
