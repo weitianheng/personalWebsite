@@ -187,7 +187,7 @@ function openWork(hh, ani) {
   }
 
   if (hh !== pwn) {
-    fetch("./listOfWorks.json")
+    fetch(`./content/listOfWorks_${language_g}.json`)
       .then((response) => response.json())
       .then((d) => {
         const data = d[hh];
@@ -197,12 +197,12 @@ function openWork(hh, ani) {
           "<div >" +
           (data["media"] == "video"
             ? '<video id="video" width="100%" controls controlsList="nodownload" onloadstart="videoLoad()" >' +
-              '<source src="video/' +
+              '<source src="assets/video/' +
               data["name"] +
-              '.mp4" type="video/mp4">' +
-              '<source src="video/' +
+              '.mp4" type="assets/video/mp4">' +
+              '<source src="assets/video/' +
               data["name"] +
-              '.ogg" type="video/ogg">' +
+              '.ogg" type="assets/video/ogg">' +
               "Your browser does not support the video tag+" +
               "</video>"
             : '<iframe width="100%" id="iframe_work" data="' +

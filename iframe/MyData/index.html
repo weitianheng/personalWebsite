@@ -1,89 +1,268 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title></title>
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <img id="faceImg" src="img/face.png" alt="your face" height="320" width="320" style="position: absolute; top: 0;">
-    <img id="icon1" src="img/icons/cata1.png" alt="icon1" height="160" width="160" style="position: absolute; top: 0;">
-    <img id="icon2" src="img/icons/cata2.png" alt="icon2" height="160" width="160" style="position: absolute; top: 0;">
-    <img id="icon3" src="img/icons/cata3.png" alt="icon3" height="160" width="160" style="position: absolute; top: 0;">
-    <img id="icon4" src="img/icons/cata4.png" alt="icon4" height="160" width="160" style="position: absolute; top: 0;">
-    <img id="icon_s1" src="img/icons/source1.png" alt="icon5" height="160" width="160" style="position: absolute; top: 0;">
-    <img id="icon_s2" src="img/icons/source2.png" alt="icon6" height="160" width="160" style="position: absolute; top: 0;">
-    <img id="icon_s3" src="img/icons/source3.png" alt="icon7" height="160" width="160" style="position: absolute; top: 0;">
-    <!-- <img id="icon5" src="img/icon5.png" alt="your face" height="40" width="40" style="position: absolute; top: 0;">
-    <img id="icon6" src="img/icon6.png" alt="your face" height="40" width="40" style="position: absolute; top: 0;"> -->
-    <canvas id="imgData" width="640" height="480" style="display: none;"></canvas>
-   
-    <div id="background"></div> 
-    <div class="container" id="container" style="position: relative; top: 44px;" >
+    <img
+      id="faceImg"
+      src="assets/img/face.png"
+      alt="your face"
+      height="320"
+      width="320"
+      style="position: absolute; top: 0"
+    />
+    <img
+      id="icon1"
+      src="assets/img/icons/cata1.png"
+      alt="icon1"
+      height="160"
+      width="160"
+      style="position: absolute; top: 0"
+    />
+    <img
+      id="icon2"
+      src="assets/img/icons/cata2.png"
+      alt="icon2"
+      height="160"
+      width="160"
+      style="position: absolute; top: 0"
+    />
+    <img
+      id="icon3"
+      src="assets/img/icons/cata3.png"
+      alt="icon3"
+      height="160"
+      width="160"
+      style="position: absolute; top: 0"
+    />
+    <img
+      id="icon4"
+      src="assets/img/icons/cata4.png"
+      alt="icon4"
+      height="160"
+      width="160"
+      style="position: absolute; top: 0"
+    />
+    <img
+      id="icon_s1"
+      src="assets/img/icons/source1.png"
+      alt="icon5"
+      height="160"
+      width="160"
+      style="position: absolute; top: 0"
+    />
+    <img
+      id="icon_s2"
+      src="assets/img/icons/source2.png"
+      alt="icon6"
+      height="160"
+      width="160"
+      style="position: absolute; top: 0"
+    />
+    <img
+      id="icon_s3"
+      src="assets/img/icons/source3.png"
+      alt="icon7"
+      height="160"
+      width="160"
+      style="position: absolute; top: 0"
+    />
+    <!-- <img id="icon5" src="assets/img/icon5.png" alt="your face" height="40" width="40" style="position: absolute; top: 0;">
+    <img id="icon6" src="assets/img/icon6.png" alt="your face" height="40" width="40" style="position: absolute; top: 0;"> -->
+    <canvas
+      id="imgData"
+      width="640"
+      height="480"
+      style="display: none"
+    ></canvas>
+
+    <div id="background"></div>
+    <div class="container" id="container" style="position: relative; top: 44px">
       <div id="ctn_ex">
-        <div id="faceDiv" style="width: 100%; height: 100%; margin: auto; "></div>
-        <div id="buttonDiv" style="width: 100%; height: 100px; position: absolute; bottom: 40px;"></div>
+        <div id="faceDiv" style="width: 100%; height: 100%; margin: auto"></div>
+        <div
+          id="buttonDiv"
+          style="width: 100%; height: 100px; position: absolute; bottom: 40px"
+        ></div>
       </div>
-      <div id="ctn_cl" style="display: none;">
+      <div id="ctn_cl" style="display: none">
         <div id="dataview" class="view">
           <div id="headbar_data" class="subheadbar">
             <div class="subheadbar_in">
-              <p class="dcs18" style="padding:14px 0px 12px 0px; margin: 0px; float:left;">Data
-                <span class="rr18" style="color: #c0c0c0;">
+              <p
+                class="dcs18"
+                style="padding: 14px 0px 12px 0px; margin: 0px; float: left"
+              >
+                Data
+                <span class="rr18" style="color: #c0c0c0">
                   (
-                  <span id="fz_vsb" style="display:none;">
-                    <span id="fz_num" style="color: #4A97AD;"></span>
+                  <span id="fz_vsb" style="display: none">
+                    <span id="fz_num" style="color: #4a97ad"></span>
                     /
                   </span>
                   <span id="fm"></span>
                   )
                 </span>
               </p>
-              <img id="filter_data" src="img/icons/filter_off.png" width="14" height="19" style="padding: 15px 6px 10px 6px;">
-              <img src="img/icons/chronoOrd.png" width="36" height="20" style="float: right; padding: 13px 0px 11px 0px; display: inline;">
+              <img
+                id="filter_data"
+                src="assets/img/icons/filter_off.png"
+                width="14"
+                height="19"
+                style="padding: 15px 6px 10px 6px"
+              />
+              <img
+                src="assets/img/icons/chronoOrd.png"
+                width="36"
+                height="20"
+                style="
+                  float: right;
+                  padding: 13px 0px 11px 0px;
+                  display: inline;
+                "
+              />
             </div>
           </div>
-          <div class="scrollBox" style="clear: both; padding-top: 16px;">
-            <img id="filter_sensitive" src="img/icons/filter_sensitive.png" style="display: none; margin-top: -18px;" >
+          <div class="scrollBox" style="clear: both; padding-top: 16px">
+            <img
+              id="filter_sensitive"
+              src="assets/img/icons/filter_sensitive.png"
+              style="display: none; margin-top: -18px"
+            />
             <div id="datalist" class="nt14"></div>
           </div>
-          <img id="filterWin" src="img/inhalt/filterWin.png" style="display: none; position: absolute; top: 44px; left: 26px;" />
-          <img id="filterWin2" src="img/inhalt/filterWin2.png" style="display: none; position: absolute; top: 44px; left: 26px;" />
+          <img
+            id="filterWin"
+            src="assets/img/inhalt/filterWin.png"
+            style="display: none; position: absolute; top: 44px; left: 26px"
+          />
+          <img
+            id="filterWin2"
+            src="assets/img/inhalt/filterWin2.png"
+            style="display: none; position: absolute; top: 44px; left: 26px"
+          />
         </div>
         <div id="appview" class="view">
           <div id="headbar_app" class="subheadbar">
             <div class="subheadbar_in">
-                <p class="dcs18" style="padding:14px 0px 12px 0px; margin: 0px; float:left;">Applications
-                  <span class="rr18" style="color: #c0c0c0;">( <span id="fz_vsb" style="display:none;"><span id="fz_num" style="color: #4A97AD;"></span>/</span><span id="fm"></span> )</span>
-                </p>
-                <img id="filter_app" src="img/icons/filter_off.png" width="14" height="19" style="padding: 15px 6px 10px 6px;">
-                <div id="widthAdjust" style="position: absolute; top: 0px; pointer-events: none;">
-                  <div style="width: 92px; height: 32px; padding-top: 12px; margin: auto; pointer-events: auto;">
-                    <div id="chooser_dstlg"></div>
-                    <img id="darGrid" class="darButton darButton_a" src="img/icons/kacheldarstellung.png" width="46" height="32" style="position: absolute;">
-                    <img id="darList" class="darButton" src="img/icons/listdarstellung.png" width="46" height="32" style="position: absolute; transform: translateX(46px);" >
-                  </div>
+              <p
+                class="dcs18"
+                style="padding: 14px 0px 12px 0px; margin: 0px; float: left"
+              >
+                Applications
+                <span class="rr18" style="color: #c0c0c0"
+                  >(
+                  <span id="fz_vsb" style="display: none"
+                    ><span id="fz_num" style="color: #4a97ad"></span>/</span
+                  ><span id="fm"></span> )</span
+                >
+              </p>
+              <img
+                id="filter_app"
+                src="assets/img/icons/filter_off.png"
+                width="14"
+                height="19"
+                style="padding: 15px 6px 10px 6px"
+              />
+              <div
+                id="widthAdjust"
+                style="position: absolute; top: 0px; pointer-events: none"
+              >
+                <div
+                  style="
+                    width: 92px;
+                    height: 32px;
+                    padding-top: 12px;
+                    margin: auto;
+                    pointer-events: auto;
+                  "
+                >
+                  <div id="chooser_dstlg"></div>
+                  <img
+                    id="darGrid"
+                    class="darButton darButton_a"
+                    src="assets/img/icons/kacheldarstellung.png"
+                    width="46"
+                    height="32"
+                    style="position: absolute"
+                  />
+                  <img
+                    id="darList"
+                    class="darButton"
+                    src="assets/img/icons/listdarstellung.png"
+                    width="46"
+                    height="32"
+                    style="position: absolute; transform: translateX(46px)"
+                  />
                 </div>
-                <img src="img/icons/chronoOrd.png" width="36" height="20" style="float: right; padding: 13px 0px 11px 0px; display: inline;">
+              </div>
+              <img
+                src="assets/img/icons/chronoOrd.png"
+                width="36"
+                height="20"
+                style="
+                  float: right;
+                  padding: 13px 0px 11px 0px;
+                  display: inline;
+                "
+              />
             </div>
           </div>
-          <div id="appScrollbox" class="scrollBox" style="clear: both; padding-top: 8px;">
-              <div id="appList" class="appview" style="display: none; padding: 14px;">
-                <img/>
-              </div>
-              <div id="appGrid" class="appview"></div>
+          <div
+            id="appScrollbox"
+            class="scrollBox"
+            style="clear: both; padding-top: 8px"
+          >
+            <div
+              id="appList"
+              class="appview"
+              style="display: none; padding: 14px"
+            >
+              <img />
+            </div>
+            <div id="appGrid" class="appview"></div>
           </div>
-          <img id="filterWin_app" src="img/inhalt/filterWin_app.png" style="display: none; position: absolute; top: 44px; left: 386px;" />
+          <img
+            id="filterWin_app"
+            src="assets/img/inhalt/filterWin_app.png"
+            style="display: none; position: absolute; top: 44px; left: 386px"
+          />
         </div>
-        <img id="crspd" src="img/icons/crspd0.png" alt=" " width="20" height="20" style="position: absolute; top: 14px; left: 350px;">
-
-        
+        <img
+          id="crspd"
+          src="assets/img/icons/crspd0.png"
+          alt=" "
+          width="20"
+          height="20"
+          style="position: absolute; top: 14px; left: 350px"
+        />
       </div>
-      <div id="infoRight" style="display: none; width: 320px; position: absolute; right: -325px; top: 0px; background-color: white; box-shadow: 0px 0px 2px grey;">
-        <div id="infoRight_d"  style="display: none;">
-          <div class="headRight" style="width: 320px; height: 44px; padding-left: 16px;">
-            <img  src="img/icons/number.png" alt="data" class="infoicon" >
-            <span class="t18" style="line-height: 44px;"></span>
+      <div
+        id="infoRight"
+        style="
+          display: none;
+          width: 320px;
+          position: absolute;
+          right: -325px;
+          top: 0px;
+          background-color: white;
+          box-shadow: 0px 0px 2px grey;
+        "
+      >
+        <div id="infoRight_d" style="display: none">
+          <div
+            class="headRight"
+            style="width: 320px; height: 44px; padding-left: 16px"
+          >
+            <img
+              src="assets/img/icons/number.png"
+              alt="data"
+              class="infoicon"
+            />
+            <span class="t18" style="line-height: 44px"></span>
           </div>
           <div class="scrollBox">
             <p class="t18">Content</p>
@@ -94,89 +273,320 @@
             <p id="discription" class="t14"></p>
             <p class="t18">Collection</p>
             <p id="collection" class="t14"></p>
-            <p class="t18" style="margin-bottom: 10px;" >Contact of Controller</p>
-            <p id="contact" class="t14" style="display: inline; "></p>
-            <img src="img/icons/brief.png" alt="-email-" height="18" width="34" style="vertical-align: -4px;">
+            <p class="t18" style="margin-bottom: 10px">Contact of Controller</p>
+            <p id="contact" class="t14" style="display: inline"></p>
+            <img
+              src="assets/img/icons/brief.png"
+              alt="-email-"
+              height="18"
+              width="34"
+              style="vertical-align: -4px"
+            />
           </div>
         </div>
-        
-        <div id="infoRight_a"  style="display: none;">
-          <div class="headRight" style="width: 320px; height: 44px;  padding-left: 16px;"s>
-              <img  src="img/icons/processing.png" alt="data" class="infoicon" >
-              <span  class="t18" style="line-height: 44px;"></span>
-              <img id="detailShow" src="img/details.png" alt="details >" height="44" width="110" style="float: right;" >
+
+        <div id="infoRight_a" style="display: none">
+          <div
+            class="headRight"
+            style="width: 320px; height: 44px; padding-left: 16px"
+            s
+          >
+            <img
+              src="assets/img/icons/processing.png"
+              alt="data"
+              class="infoicon"
+            />
+            <span class="t18" style="line-height: 44px"></span>
+            <img
+              id="detailShow"
+              src="assets/img/details.png"
+              alt="details >"
+              height="44"
+              width="110"
+              style="float: right"
+            />
           </div>
           <div class="scrollBox">
-              <p class="t18" style="margin-bottom: 10px;">Contact Person</p>
-              <p id="contact" class="t14" style="display: inline;"></p>
-              <img src="img/icons/brief.png" alt="-email-" height="18" width="34" style="vertical-align: -4px;">
-              <p id="titel_dis" class="t18" style="margin-top: 28px; width: 86px;">Discription</p>
-              <p id="discription" class="t14"></p>
-              <p class="t18">Purpose</p>
-              <p id="purpose" class="t14" style="margin-bottom: 60px;"></p>
+            <p class="t18" style="margin-bottom: 10px">Contact Person</p>
+            <p id="contact" class="t14" style="display: inline"></p>
+            <img
+              src="assets/img/icons/brief.png"
+              alt="-email-"
+              height="18"
+              width="34"
+              style="vertical-align: -4px"
+            />
+            <p id="titel_dis" class="t18" style="margin-top: 28px; width: 86px">
+              Discription
+            </p>
+            <p id="discription" class="t14"></p>
+            <p class="t18">Purpose</p>
+            <p id="purpose" class="t14" style="margin-bottom: 60px"></p>
           </div>
         </div>
       </div>
 
-      <div id="detailWin" style="display: none; width: 100%; position: absolute; top: 0; background-color: #F9F9F9;">
-          <div style="height: 44px; padding-left: 38px;">
-              <img  src="img/icons/processing.png" alt="app" class="infoicon" >
-              <span class="t18" style="line-height: 44px;">eTravel</span>
-              <img id="shield" src="img/icons/shield.png" alt="safeMeasure" height="18" width="14"style="vertical-align: -3px; margin-left: 4px;" >
-              <img id="detailClose" src="img/icons/close.png" alt="x" height="12" width="12" style="float: right; padding: 16px;" >
+      <div
+        id="detailWin"
+        style="
+          display: none;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          background-color: #f9f9f9;
+        "
+      >
+        <div style="height: 44px; padding-left: 38px">
+          <img
+            src="assets/img/icons/processing.png"
+            alt="app"
+            class="infoicon"
+          />
+          <span class="t18" style="line-height: 44px">eTravel</span>
+          <img
+            id="shield"
+            src="assets/img/icons/shield.png"
+            alt="safeMeasure"
+            height="18"
+            width="14"
+            style="vertical-align: -3px; margin-left: 4px"
+          />
+          <img
+            id="detailClose"
+            src="assets/img/icons/close.png"
+            alt="x"
+            height="12"
+            width="12"
+            style="float: right; padding: 16px"
+          />
+        </div>
+        <div class="scrollBox" style="width: 100%; padding: 0px">
+          <div style="padding: 0px; margin: auto; width: 1440px">
+            <img
+              id="details_inhalt"
+              src="assets/img/inhalt/details_normal.png"
+            />
+            <img
+              id="clusterButton"
+              src="assets/img/icons/clusterButton.png"
+              width="14"
+              height="10"
+              style="
+                display: none;
+                position: relative;
+                transform: translate(664px, -350px);
+              "
+            />
+            <!-- <img id="clusterButton" src="assets/img/icons/clusterButton.png" width="14" height="10" style="position: relative; transform: translate(664px,-355px);"/> -->
           </div>
-          <div class="scrollBox" style="width: 100%; padding: 0px;" > 
-            <div style="padding: 0px; margin: auto; width: 1440px;"> 
-              <img id="details_inhalt" src="img/inhalt/details_normal.png" />
-              <img id="clusterButton" src="img/icons/clusterButton.png" width="14" height="10" style="display: none; position: relative; transform: translate(664px,-350px);"/>
-              <!-- <img id="clusterButton" src="img/icons/clusterButton.png" width="14" height="10" style="position: relative; transform: translate(664px,-355px);"/> -->
-            </div>
-          </div>
-      </div>
-    </div>
-    <div id="headbar" style="width: 100%; height: 44px; position: absolute; top: 0px; display: none;">
-      <img src="img/logo.png" height="12" width="74" style="padding: 16px 12px 16px 38px;" >
-      <span id="undertitel" >make the appling of your data transparent for you</span>
-      <div style="margin: auto; position: absolute; top: 0px; width :100%; pointer-events: none;">
-        <div style="margin: auto; width: 189px;">
-          <img class="modus" id="explorer" src="img/explorer.png" height="25" width="90" style="padding: 10px 0px 9px 0px; pointer-events: auto;">
-          <img src="img/split.png" height="25" width="1" style="padding: 10px 0px 9px 0px;">
-          <img class="modus" id="classic" src="img/classic.png" height="25" width="90" style="opacity: 0.25; padding: 10px 0px 9px 0px; pointer-events: auto;" >
         </div>
       </div>
-      <div style="float: right; padding-right: 20px; display: inline;">
-        <img id="search" src="img/icons/search.png" height="24" width="24" style="padding: 10px;">
-        <img id = "search_feld" src="img/inhalt/search_feld.png" height="44" width="125" style="display: none;">
-        <img id = "noti_feld" src="img/inhalt/noti_feld.png" height="44" width="199" style="display: none;">
-        <img id = "notification" src="img/icons/notification.png" height="29" width="24" style="padding: 5px 10px 10px 10px;">
-        <img id = "visibility" src="img/icons/visibility_off.png" height="14" width="30" style="padding: 15px 7px 15px 7px;">
+    </div>
+    <div
+      id="headbar"
+      style="
+        width: 100%;
+        height: 44px;
+        position: absolute;
+        top: 0px;
+        display: none;
+      "
+    >
+      <img
+        src="assets/img/logo.png"
+        height="12"
+        width="74"
+        style="padding: 16px 12px 16px 38px"
+      />
+      <span id="undertitel"
+        >make the appling of your data transparent for you</span
+      >
+      <div
+        style="
+          margin: auto;
+          position: absolute;
+          top: 0px;
+          width: 100%;
+          pointer-events: none;
+        "
+      >
+        <div style="margin: auto; width: 189px">
+          <img
+            class="modus"
+            id="explorer"
+            src="assets/img/explorer.png"
+            height="25"
+            width="90"
+            style="padding: 10px 0px 9px 0px; pointer-events: auto"
+          />
+          <img
+            src="assets/img/split.png"
+            height="25"
+            width="1"
+            style="padding: 10px 0px 9px 0px"
+          />
+          <img
+            class="modus"
+            id="classic"
+            src="assets/img/classic.png"
+            height="25"
+            width="90"
+            style="
+              opacity: 0.25;
+              padding: 10px 0px 9px 0px;
+              pointer-events: auto;
+            "
+          />
+        </div>
+      </div>
+      <div style="float: right; padding-right: 20px; display: inline">
+        <img
+          id="search"
+          src="assets/img/icons/search.png"
+          height="24"
+          width="24"
+          style="padding: 10px"
+        />
+        <img
+          id="search_feld"
+          src="assets/img/inhalt/search_feld.png"
+          height="44"
+          width="125"
+          style="display: none"
+        />
+        <img
+          id="noti_feld"
+          src="assets/img/inhalt/noti_feld.png"
+          height="44"
+          width="199"
+          style="display: none"
+        />
+        <img
+          id="notification"
+          src="assets/img/icons/notification.png"
+          height="29"
+          width="24"
+          style="padding: 5px 10px 10px 10px"
+        />
+        <img
+          id="visibility"
+          src="assets/img/icons/visibility_off.png"
+          height="14"
+          width="30"
+          style="padding: 15px 7px 15px 7px"
+        />
       </div>
     </div>
-    <div id="notificationWin" style = "display: none; position: absolute; top: 0px; right: 12px;">
-      <img src = "img/inhalt/notificationWin.png"/>
-      <img id="noti_data" src = "img/inhalt/noti_data.png"  style = "position: absolute; transform: translate(1px,-94px);"/>
-      <img id="noti_app" src = "img/inhalt/noti_app.png"  style = "position: absolute; transform: translate(1px,-50px);"/>
+    <div
+      id="notificationWin"
+      style="display: none; position: absolute; top: 0px; right: 12px"
+    >
+      <img src="assets/img/inhalt/notificationWin.png" />
+      <img
+        id="noti_data"
+        src="assets/img/inhalt/noti_data.png"
+        style="position: absolute; transform: translate(1px, -94px)"
+      />
+      <img
+        id="noti_app"
+        src="assets/img/inhalt/noti_app.png"
+        style="position: absolute; transform: translate(1px, -50px)"
+      />
     </div>
-    <div id="search1" style = "display: none; position: absolute; top: 0px; right: 108px;">
-      <img src = "img/inhalt/searchWin.png"/>
-      <img id="searchB" class="searchBDA" src = "img/inhalt/searchB.png"  style = "position: absolute; transform: translate(1px,-139px);"/>
-      <img id="searchD" class="searchBDA" src = "img/inhalt/searchD.png"  style = "position: absolute; transform: translate(1px,-94px);"/>
-      <img id="searchA" class="searchBDA" src = "img/inhalt/searchA.png"  style = "position: absolute; transform: translate(1px,-50px);"/>
+    <div
+      id="search1"
+      style="display: none; position: absolute; top: 0px; right: 108px"
+    >
+      <img src="assets/img/inhalt/searchWin.png" />
+      <img
+        id="searchB"
+        class="searchBDA"
+        src="assets/img/inhalt/searchB.png"
+        style="position: absolute; transform: translate(1px, -139px)"
+      />
+      <img
+        id="searchD"
+        class="searchBDA"
+        src="assets/img/inhalt/searchD.png"
+        style="position: absolute; transform: translate(1px, -94px)"
+      />
+      <img
+        id="searchA"
+        class="searchBDA"
+        src="assets/img/inhalt/searchA.png"
+        style="position: absolute; transform: translate(1px, -50px)"
+      />
     </div>
-    <div id="search0" style = "display: none; position: absolute; top: 0px; right: 108px;">
-        <img src = "img/inhalt/search0.png"/>
+    <div
+      id="search0"
+      style="display: none; position: absolute; top: 0px; right: 108px"
+    >
+      <img src="assets/img/inhalt/search0.png" />
     </div>
-    <div id="visibilityWin" style = "display: none; position: absolute; top: 0px; right: 20px; pointer-events: none;">
-        <img id="visibilityImg" src = "img/inhalt/visibilityWin.png"  />
-        <div id="visiSlider_block" style = "pointer-events: auto; width: 56px; height: 22px; position: absolute; transform: translate(257px,-45px); ">
-          <div id="visiSlider" style = "margin: 2px; background-color: #B6B6B6; width: 26px; height: 18px; "></div>
-        </div>
+    <div
+      id="visibilityWin"
+      style="
+        display: none;
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        pointer-events: none;
+      "
+    >
+      <img id="visibilityImg" src="assets/img/inhalt/visibilityWin.png" />
+      <div
+        id="visiSlider_block"
+        style="
+          pointer-events: auto;
+          width: 56px;
+          height: 22px;
+          position: absolute;
+          transform: translate(257px, -45px);
+        "
+      >
+        <div
+          id="visiSlider"
+          style="
+            margin: 2px;
+            background-color: #b6b6b6;
+            width: 26px;
+            height: 18px;
+          "
+        ></div>
+      </div>
     </div>
-    <img id="shield_info" src="img/inhalt/shieldInfo.png" style="display: none; position: absolute; top: 0px; left: 0px; pointer-events: none;" />
-    <div id="clusterList" style="display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(201,207,210,0.88);" >
-      <div id="clusterImg" style="margin: auto; width: 577px; height: 814px;" >
-        <img src="img/inhalt/clusterList.png" />
-        <img id="closeCluster" src="img/icons/close.png" width="14" height="14" style = "position: absolute; transform: translate(541px,-793px); " />
+    <img
+      id="shield_info"
+      src="assets/img/inhalt/shieldInfo.png"
+      style="
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        pointer-events: none;
+      "
+    />
+    <div
+      id="clusterList"
+      style="
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(201, 207, 210, 0.88);
+      "
+    >
+      <div id="clusterImg" style="margin: auto; width: 577px; height: 814px">
+        <img src="assets/img/inhalt/clusterList.png" />
+        <img
+          id="closeCluster"
+          src="assets/img/icons/close.png"
+          width="14"
+          height="14"
+          style="position: absolute; transform: translate(541px, -793px)"
+        />
       </div>
     </div>
 
