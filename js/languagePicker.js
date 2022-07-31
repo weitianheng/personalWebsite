@@ -7,6 +7,6 @@ $("#lang_picker").click(() => {
   let params = new URLSearchParams(searchParams);
   params.set("language", language_g === "en" ? "de" : "en");
   let paramsStr = params.toString();
-  let newURL = document.location.href.split("?")[0] + paramsStr;
+  let newURL = document.location.href.split("?")[0] + "?" + paramsStr;
   window.open(newURL);
 });
