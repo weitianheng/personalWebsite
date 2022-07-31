@@ -278,7 +278,7 @@ div > span {
   text-align: justify;
 }
 #lang_picker {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   color: rgb(172, 178, 179);
