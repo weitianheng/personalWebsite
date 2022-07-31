@@ -282,6 +282,7 @@ div > span {
   top: 20px;
   right: 20px;
   color: rgb(172, 178, 179);
+  cursor: pointer;
 }
 #lang_picker > .active {
   font-weight: 700;
